@@ -8,11 +8,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ItemInit {
-    public static DeferredRegister<Item> ITEM = DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
+    public static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
     public static final RegistryObject<Item> TUTORIAL_ITEM = register("tutorial_item");
 
     private static RegistryObject<Item> register(String name) {
-        return ITEM.register(name, () -> new Item(new Item.Properties().tab(MainItemGroup.MAIN)));
+        return ITEMS.register(name, () -> new Item(new Item.Properties().tab(MainItemGroup.MAIN)));
     }
 }
