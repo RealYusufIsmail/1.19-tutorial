@@ -1,5 +1,6 @@
 package io.github.realyusufismail;
 
+import io.github.realyusufismail.core.init.ItemInit;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -13,5 +14,7 @@ public class TutorialMod {
 
     public TutorialMod() {
       IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ItemInit.ITEM.register(bus);
     }
 }
